@@ -86,7 +86,7 @@ jobs:
           uv pip install --force-reinstall ../../wtforms
       - name: Run downstream tests
         working-directory: ${{ matrix.downstream }}
-        run: uv run --no-sync pytest
+        run: uv run --no-sync pytest -W default
       - name: Emit warning on failure
         if: failure()
         run: echo "::warning::${{ matrix.downstream }} tests failed on Python ${{ matrix.python }}"
