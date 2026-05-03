@@ -1,9 +1,9 @@
 .. currentmodule:: wtforms
 
-Unreleased
+Version 3.2.2
 -------------
 
-Unreleased
+Released 2026-05-03
 
 - Fix :class:`~validators.Disabled` validation with provided formdata. :pr:`880`
 - End support for Python 3.9, start support for Python 3.14. :pr:`883`
