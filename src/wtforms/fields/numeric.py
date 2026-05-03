@@ -199,7 +199,7 @@ class FloatField(Field):
 
 class IntegerRangeField(IntegerField):
     """
-    Represents an ``<input type="range">``.
+    Represents an :mdn-input:`range`.
     """
 
     widget = widgets.RangeInput()
@@ -207,7 +207,7 @@ class IntegerRangeField(IntegerField):
 
 class DecimalRangeField(DecimalField):
     """
-    Represents an ``<input type="range">``.
+    Represents an :mdn-input:`range`.
     """
 
     widget = widgets.RangeInput(step="any")

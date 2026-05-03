@@ -156,8 +156,8 @@ class SelectField(SelectFieldBase):
 class SelectMultipleField(SelectField):
     """
     No different from a normal select field, except this one can take (and
-    validate) multiple choices.  You'll need to specify the HTML `size`
-    attribute to the select field when rendering.
+    validate) multiple choices. You'll need to specify the HTML
+    :mdn-attr:`size` attribute on the :mdn-tag:`select` field when rendering.
     """
 
     widget = widgets.Select(multiple=True)
@@ -217,7 +217,7 @@ class SelectMultipleField(SelectField):
 
 class RadioField(SelectField):
     """
-    Like a SelectField, except displays a list of radio buttons.
+    Like a SelectField, except displays a list of :mdn-input:`radio` buttons.
 
     Iterating the field will produce subfields (each containing a label as
     well) in order to allow custom rendering of the individual radio fields.
