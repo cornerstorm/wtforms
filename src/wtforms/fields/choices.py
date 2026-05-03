@@ -56,9 +56,7 @@ class SelectFieldBase(Field):
                 value, label, checked = choice
                 render_kw = {}
 
-            opt = self._Option(
-                label=label, id="%s-%d" % (self.id, i), **opts, **render_kw
-            )
+            opt = self._Option(label=label, id=f"{self.id}-{i}", **opts, **render_kw)
             opt.process(None, value)
             opt.checked = checked
             yield opt

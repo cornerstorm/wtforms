@@ -50,9 +50,9 @@ class FieldList(Field):
                 "FieldList does not accept any filters. Instead, define"
                 " them on the enclosed field."
             )
-        assert isinstance(
-            unbound_field, UnboundField
-        ), "Field must be unbound, not a field class"
+        assert isinstance(unbound_field, UnboundField), (
+            "Field must be unbound, not a field class"
+        )
         self.unbound_field = unbound_field
         self.min_entries = min_entries
         self.max_entries = max_entries
@@ -153,9 +153,9 @@ class FieldList(Field):
         setattr(obj, name, output)
 
     def _add_entry(self, formdata=None, data=unset_value, index=None):
-        assert (
-            not self.max_entries or len(self.entries) < self.max_entries
-        ), "You cannot have more than max_entries entries in this FieldList"
+        assert not self.max_entries or len(self.entries) < self.max_entries, (
+            "You cannot have more than max_entries entries in this FieldList"
+        )
         if index is None:
             index = self.last_index + 1
         self.last_index = index

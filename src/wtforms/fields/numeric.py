@@ -144,7 +144,7 @@ class DecimalField(LocaleAwareNumberField):
         if not hasattr(self.data, "quantize"):
             # If for some reason, data is a float or int, then format
             # as we would for floats using string formatting.
-            format = "%%0.%df" % self.places
+            format = f"%.{self.places}f"
             return format % self.data
 
         exp = decimal.Decimal(".1") ** self.places
