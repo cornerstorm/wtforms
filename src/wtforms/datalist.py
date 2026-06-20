@@ -121,6 +121,10 @@ class DataList:
         raw = self._choices
         if raw is None:
             return []
+        if isinstance(raw, dict):
+            return [
+                DataListChoice(value=value, label=label) for value, label in raw.items()
+            ]
         return [DataListChoice.from_input(item) for item in raw]
 
     def __call__(self, field=None, **kwargs):

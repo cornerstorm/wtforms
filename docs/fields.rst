@@ -610,7 +610,8 @@ Data Lists
 
     ``choices`` is either a list of :class:`~wtforms.DataListChoice`
     (or plain strings, in which case the string is used as both value
-    and label), or a callable invoked at render time. The callable
+    and label), a shorthand ``{value: label}`` dict, or a callable
+    invoked at render time. The callable
     may take no argument (``fn()``) for a static list, or ``(field)``
     to adapt the suggestions to the current field value at each
     render — convenient for server-side filtering::

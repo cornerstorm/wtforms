@@ -48,6 +48,21 @@ def test_choice_choices_render_value_and_label():
     assert 'label="United States"' in html
 
 
+def test_dict_shorthand_choices_render_value_and_label():
+    """A ``{value: label}`` dict renders both ``value=`` and ``label=`` attributes."""
+
+    class F(Form):
+        country = StringField(
+            datalist=DataList({"FR": "France", "US": "United States"})
+        )
+
+    html = str(F().country.datalist())
+    assert 'value="FR"' in html
+    assert 'label="France"' in html
+    assert 'value="US"' in html
+    assert 'label="United States"' in html
+
+
 @pytest.mark.parametrize(
     ("postdata", "expected"),
     [

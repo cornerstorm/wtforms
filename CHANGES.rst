@@ -1,5 +1,13 @@
 .. currentmodule:: wtforms
 
+Version 3.3.0b4
+---------------
+
+Unreleased
+
+- :class:`~datalist.DataList` ``choices`` accepts the shorthand
+  ``{value: label}`` dict syntax. :issue:`886`
+
 Version 3.3.0b3
 ---------------
 
